@@ -1,0 +1,121 @@
+{
+  "高级数据结构": {
+    "select_jxbbh": "09032070201730000",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "09032070"
+  },
+  "运筹学": {
+    "select_jxbbh": "09032060201730001",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "09032060"
+  },
+  "组合数学": {
+    "select_jxbbh": "09032040201730000",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "09032040"
+  },
+  "数学建模与数学实验": {
+    "select_jxbbh": "07011340201730002",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "07011340"
+  },
+  "概率论与数理统计（A）": {
+    "select_jxbbh": "0701131110201730007",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "0701131110"
+  }
+}
+{
+  "分布式系统设计": {
+    "select_jxbbh": "09034080201730000",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "09034080"
+  },
+  "机器视觉与应用（研）": {
+    "select_jxbbh": "09033330201730000",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "09033330"
+  },
+  "量子信息处理与几何（研）": {
+    "select_jxbbh": "09033320201730000",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "09033320"
+  },
+  "计算机网络高级主题（研/英）": {
+    "select_jxbbh": "09033310201730000",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "09033310"
+  },
+  "编译原理课程设计": {
+    "select_jxbbh": "09033170201730001",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "09033170"
+  },
+  "多智能体系统": {
+    "select_jxbbh": "09033132201730000",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "09033132"
+  },
+  "人工智能": {
+    "select_jxbbh": "09033110201730000",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "09033110"
+  },
+  "移动互联网导论": {
+    "select_jxbbh": "09014180201730000",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "09014180"
+  },
+  "信息检索技术": {
+    "select_jxbbh": "09014160201730000",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "09014160"
+  },
+  "网络高级编程": {
+    "select_jxbbh": "09014150201730000",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "09014150"
+  },
+  "网络工程与组网技术": {
+    "select_jxbbh": "09014140201730000",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "09014140"
+  },
+  "软件测试": {
+    "select_jxbbh": "09014120201730000",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "09014120"
+  },
+  "软件体系结构": {
+    "select_jxbbh": "09014070201730000",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "09014070"
+  },
+  "信息及网络安全": {
+    "select_jxbbh": "09014050201730000",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "09014050"
+  },
+  "VLSI系统导论（外系）": {
+    "select_jxbbh": "06043000201730000",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "06043000"
+  }
+}
+{
+  "大学物理（B1）Ⅰ": {
+    "select_jxbbh": "1002123111201730026",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "1002123111"
+  },
+  "高等数学（A）Ⅱ": {
+    "select_jxbbh": "0701120112201730019",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "0701120112"
+  },
+  "大学英语Ⅲ": {
+    "select_jxbbh": "1700105113201730007",
+    "select_xkkclx": 11,
+    "select_jhkcdm": "1700105113"
+  }
+}
