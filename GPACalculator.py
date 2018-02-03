@@ -12,7 +12,7 @@ unit_arr_seu = [0, 0, 0, 0.5, 0.5, 0.5, 0.8, 0.8, 0.8, 0.8]
 
 
 def read_file():
-	with io.open("data/score.txt", "r", encoding="gbk") as file:
+	with io.open("data/score", "r", encoding="utf8") as file:
 		for line in file.readlines():
 			temp = []
 			# 以空格分开各个字段
@@ -70,7 +70,10 @@ def correspond_gpa_seu(grade):
 
 def correspond_gpa_wes(grade):
 	# 根据数字成绩计算出对应GPA（WES）
-	temp = int(grade)
+	if grade == "优" or grade == "良" or grade == "中" or grade == "通过":
+		temp = level_dict[grade]
+	else:
+		temp = int(grade)
 
 	if temp <= 100 and temp >= 85:
 		return 4
