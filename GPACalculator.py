@@ -1,3 +1,4 @@
+#!coding=utf8
 # 成绩信息
 # 格式：[课程名，学分，成绩，状态（首修，重修，补考），全校通选课备注]
 res = []
@@ -35,7 +36,7 @@ def preprocess():
 		for i in toDel:
 			del res[i]
 
-def calc():
+def calc(handler):
 	# 计算GPA，GPA=总成绩*总学分/总学分
 	tGPA = 0
 	tScore = 0
@@ -45,7 +46,10 @@ def calc():
 			continue
 
 		tScore += float(row[1])
-		tGPA += correspond_gpa_seu(row[2]) * float(row[1])
+		if handler == "seu":
+			tGPA += correspond_gpa_seu(row[2]) * float(row[1])
+		elif handler == "wes":
+			tGPA += correspond_gpa_wes(row[2]) * float(row[1])
 
 	print(tGPA / tScore)	
 
@@ -62,8 +66,21 @@ def correspond_gpa_seu(grade):
 
 	return tenth_arr_seu[tenth] + unit_arr_seu[unit]
 
+def correspond_gpa_wes(grade):
+	# 根据数字成绩计算出对应GPA（WES）
+	temp = int(grade)
+
+	if temp <= 100 and temp >= 85:
+		return 4
+	elif temp <= 84 and temp >= 75:
+		return 3
+	elif temp <= 74 and temp >= 60:
+		return 2
+	else:
+		return 1
+
 
 if __name__ == "__main__":
 	read_file()
 	preprocess()
-	calc()
+	calc("wes")
