@@ -1,4 +1,6 @@
 #!coding=utf8
+import io
+
 # 成绩信息
 # 格式：[课程名，学分，成绩，状态（首修，重修，补考），全校通选课备注]
 res = []
@@ -10,7 +12,7 @@ unit_arr_seu = [0, 0, 0, 0.5, 0.5, 0.5, 0.8, 0.8, 0.8, 0.8]
 
 
 def read_file():
-	with open("data/score.txt", "r") as file:
+	with io.open("data/score.txt", "r", encoding="gbk") as file:
 		for line in file.readlines():
 			temp = []
 			# 以空格分开各个字段
