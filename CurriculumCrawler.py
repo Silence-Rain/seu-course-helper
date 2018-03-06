@@ -5,8 +5,8 @@ import sys
 import threading
 from bs4 import BeautifulSoup
 
-reload(sys)
-sys.setdefaultencoding("utf8")
+# reload(sys)
+# sys.setdefaultencoding("utf8")
 content = [[], [], [], []]
 
 # 获得网页内容并解析
@@ -21,13 +21,14 @@ def get_content(ids, year, index):
 		# 解析内容
 		try: 
 			soup = BeautifulSoup(r.text, "lxml")
+			name = soup.find("table", attrs={"cellpadding": "5", "cellspacing": "5"}).find_all("tr")[4].find("table").find("tr").find_all("td")[4].string[3:]
 			row_all = soup.find("table", attrs={"class": "tableline"}).find_all("tr")
 		except AttributeError as e:
 			continue
 
-		res_all = [i]
+		res_all = [i, name]
 		for row in row_all[1:-1]:
-			val = row.find_all("td")[1].string.strip()
+			val = str(row.find_all("td")[2].string.strip())
 
 			if val != "":
 				res_all.append(val)
@@ -44,7 +45,7 @@ def write_txt(content):
 					file.write(item + " ")
 				file.write("\r\n")
 
-	print "写入成功"
+	print("写入成功")
 
 
 # 09015所有学生学号迭代器（按班级分隔）
@@ -75,9 +76,12 @@ if __name__ == "__main__":
 	threads.append(t3)
 	threads.append(t4)
 
-	for item in threads:
-		item.start()
-	for item in threads:
-		item.join()
+	try:
+		for item in threads:
+			item.start()
+		for item in threads:
+			item.join()
+	except:
+		pass
 
 	write_txt(content)
