@@ -5,7 +5,7 @@ import io
 # 格式：[课程名，学分，成绩，状态（首修，重修，补考），全校通选课备注]
 res = []
 # 对非数字成绩的翻译
-level_dict = {"优": 95, "良": 85, "中": 75, "通过": 65}
+level_dict = {"优": 97, "良": 87, "中": 77, "通过": 67}
 # 东大GPA计算方案
 tenth_arr_seu = [0, 0, 0, 0, 0, 0, 1, 2, 3, 4]
 unit_arr_seu = [0, 0, 0, 0.5, 0.5, 0.5, 0.8, 0.8, 0.8, 0.8]
@@ -42,8 +42,9 @@ def calc(handler):
 	# 计算GPA，GPA=总成绩*总学分/总学分
 	tGPA = 0
 	tScore = 0
+	cnt = 0
 
-	for row in res[:13]:
+	for row in res:
 		if row[4] != "":
 			continue
 
@@ -52,6 +53,9 @@ def calc(handler):
 			tGPA += correspond_gpa_seu(row[2]) * float(row[1])
 		elif handler == "wes":
 			tGPA += correspond_gpa_wes(row[2]) * float(row[1])
+
+		cnt += 1
+		print(cnt)
 
 	print(tGPA / tScore)	
 
@@ -82,10 +86,10 @@ def correspond_gpa_wes(grade):
 	elif temp <= 74 and temp >= 60:
 		return 2
 	else:
-		return 1
+		return 0
 
 
 if __name__ == "__main__":
 	read_file()
-	preprocess()
+	# preprocess()
 	calc("wes")
