@@ -3,12 +3,12 @@ var a = setInterval(function(){
 		async:false, 
 		type:"post", 
 		contentType:"application/json", 
-		url:"runSelectclassSelectionAction.action?select_jxbbh="+'09033120201720000'+"&select_xkkclx="+'11'+"&select_jhkcdm="+'09033120', 
+		url:"runSelectclassSelectionAction.action?select_jxbbh="+'09014070201730000'+"&select_xkkclx="+'11'+"&select_jhkcdm="+'09014070', 
 		data:"{}", 
 		dataType:"json", 
 		success:function(data){ 
 			if(data.rso.isSuccess == 'false'){ 
-				console.log("多媒体"+data.rso.errorStr); 
+				console.log("体系结构"+data.rso.errorStr); 
 				return; 
 			}
 			else{ 

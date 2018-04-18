@@ -28,17 +28,20 @@ def get_content(ids, year, index):
 
 		res_all = [i, name]
 		for row in row_all[1:-1]:
-			val = str(row.find_all("td")[2].string.strip())
+			val = str(row.find_all("td")[1].string.strip())
 
-			if val != "":
-				res_all.append(val)
+			if val == "编译原理课程设计":
+				print(name)
 
-		content[index].append(res_all)
+			# if val != "":
+			# 	res_all.append(val)
+
+		# content[index].append(res_all)
 
 
 # 写入文件记录
 def write_txt(content):
-	with open("data/09015.txt", "w") as file:
+	with open("../../data/09015.txt", "w") as file:
 		for c in content:
 			for row in c:
 				for item in row:
@@ -67,12 +70,12 @@ if __name__ == "__main__":
 	year = "17-18-3"
 
 	threads = []
-	t1 = threading.Thread(target=get_content, args=(ids, year, 0))
-	t2 = threading.Thread(target=get_content, args=(ids, year, 1))
+	# t1 = threading.Thread(target=get_content, args=(ids, year, 0))
+	# t2 = threading.Thread(target=get_content, args=(ids, year, 1))
 	t3 = threading.Thread(target=get_content, args=(ids, year, 2))
 	t4 = threading.Thread(target=get_content, args=(ids, year, 3))
-	threads.append(t1)
-	threads.append(t2)
+	# threads.append(t1)
+	# threads.append(t2)
 	threads.append(t3)
 	threads.append(t4)
 
@@ -84,4 +87,4 @@ if __name__ == "__main__":
 	except:
 		pass
 
-	write_txt(content)
+	# write_txt(content)
